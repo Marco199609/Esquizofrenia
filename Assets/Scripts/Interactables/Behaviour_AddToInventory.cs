@@ -9,5 +9,6 @@ public class Behaviour_AddToInventory : MonoBehaviour, IBehaviour
     public void Behaviour()
     {
         PlayerController.Instance.Inventory.Add(_objectToAdd);
+        SoundManager.Instance.PlaySoundEffect();
     }
 }

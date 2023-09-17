@@ -8,6 +8,7 @@ public class Behaviour_SpawnCamera : MonoBehaviour, IBehaviour
     [SerializeField] private GameObject _camera;
     public void Behaviour()
     {
+        SoundManager.Instance.PlayMoveEffect();
         _camera.transform.position = _spawnPoint.transform.position;
         _camera.transform.rotation = _spawnPoint.transform.rotation;
     }

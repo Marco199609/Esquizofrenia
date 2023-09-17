@@ -35,7 +35,7 @@ public class UIManager : MonoBehaviour
 
     public void SelectInventoryItem()
     {
-        
+        SoundManager.Instance.PlayClick();
         GameObject button = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
 
         for(int i = 0; i < _inventoryButtons.Length; i++)

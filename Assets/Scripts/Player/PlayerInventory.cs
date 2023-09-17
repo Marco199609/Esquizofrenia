@@ -44,6 +44,8 @@ public class PlayerInventory : MonoBehaviour
     {
         if(index < Objects.Count)
             _selectedObject = Objects[index];
+        else
+            _selectedObject = null;
     }
 
     public GameObject SelectedObject()

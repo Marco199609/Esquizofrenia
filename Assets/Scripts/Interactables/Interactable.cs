@@ -25,6 +25,7 @@ public class Interactable : MonoBehaviour
         }
         else
         {
+            SoundManager.Instance.PlayError();
             string message = "Need " + _requiredObject.name + "!";
             UIManager.Instance.Message(message);
         }
