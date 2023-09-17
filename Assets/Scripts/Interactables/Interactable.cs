@@ -23,6 +23,11 @@ public class Interactable : MonoBehaviour
         {
             _requiredObjects.Remove(_inventory.SelectedObject());
             _inventory.Use(_inventory.SelectedObject());
+
+            if(_requiredObjects.Count > 0)
+            {
+                return;
+            }
         }
 
         if (_requiredObjects.Count == 0)
