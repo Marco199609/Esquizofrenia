@@ -23,6 +23,7 @@ public class PlayerInventory : MonoBehaviour
         {
             string message = "Inventory full!";
             UIManager.Instance.Message(message);
+            SoundManager.Instance.PlayError();
         }
 
         UpdateUI();

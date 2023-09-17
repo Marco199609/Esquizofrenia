@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6662975462185680169}
   - component: {fileID: 6662975462185680166}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Item 1 icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -100,7 +100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6662975462203381491}
   - component: {fileID: 6662975462203381488}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Item 0 icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -440,7 +440,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6662975462761192555}
   - component: {fileID: 6662975462761192552}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Item 2 icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -532,7 +532,7 @@ GameObject:
   - component: {fileID: 6662975462792227963}
   - component: {fileID: 6662975462792227962}
   - component: {fileID: 6662975462792227965}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Button 0
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -665,7 +665,7 @@ GameObject:
   - component: {fileID: 6662975463033861757}
   - component: {fileID: 6662975463033861755}
   - component: {fileID: 6662975463033861754}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: MessagesText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -687,10 +687,10 @@ RectTransform:
   m_Father: {fileID: 6662975464192414209}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 775.4, y: -482.875}
-  m_SizeDelta: {x: 200, y: 50}
+  m_AnchorMin: {x: 0.34277087, y: 0.91670376}
+  m_AnchorMax: {x: 0.69010425, y: 1}
+  m_AnchoredPosition: {x: 177.5, y: -17}
+  m_SizeDelta: {x: -467, y: -40}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &6662975463033861755
 CanvasRenderer:
@@ -754,7 +754,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 4
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -800,7 +800,7 @@ GameObject:
   - component: {fileID: 6662975463069871386}
   - component: {fileID: 6662975463069871389}
   - component: {fileID: 6662975463069871388}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: EventSystem
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -866,7 +866,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6662975463195207529}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: InventoryUI
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -909,7 +909,7 @@ GameObject:
   - component: {fileID: 6662975463366881754}
   - component: {fileID: 6662975463366881757}
   - component: {fileID: 6662975463366881756}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Button 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1128,8 +1128,8 @@ Camera:
   m_GameObject: {fileID: 6662975463653385807}
   m_Enabled: 1
   serializedVersion: 2
-  m_ClearFlags: 1
-  m_BackGroundColor: {r: 0.1986472, g: 0.29749614, b: 0.4528302, a: 0}
+  m_ClearFlags: 2
+  m_BackGroundColor: {r: 0, g: 0, b: 0, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -1182,7 +1182,7 @@ GameObject:
   - component: {fileID: 6662975463696094543}
   - component: {fileID: 6662975463696094542}
   - component: {fileID: 6662975463696094545}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Button 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1314,7 +1314,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6662975463796947275}
   - component: {fileID: 6662975463796947272}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: UI Manager
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1378,7 +1378,7 @@ GameObject:
   - component: {fileID: 6662975463883206680}
   - component: {fileID: 6662975463883206683}
   - component: {fileID: 6662975463883206682}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Button 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1510,7 +1510,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6662975463901981205}
   - component: {fileID: 6662975463901981202}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1579,7 +1579,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.2}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1599,7 +1599,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6662975464073453994}
   - component: {fileID: 6662975464073453995}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1668,7 +1668,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.2}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1688,7 +1688,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6662975464077816595}
   - component: {fileID: 6662975464077816592}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1757,7 +1757,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.2}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -1777,7 +1777,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6662975464093100892}
   - component: {fileID: 6662975464093100893}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Item 3 icon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1869,7 +1869,7 @@ GameObject:
   - component: {fileID: 6662975464192414332}
   - component: {fileID: 6662975464192414335}
   - component: {fileID: 6662975464192414334}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: Canvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2097,7 +2097,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6662975464237111930}
   - component: {fileID: 6662975464237111931}
-  m_Layer: 0
+  m_Layer: 5
   m_Name: background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2166,7 +2166,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: -2
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 1, b: 1, a: 0.2}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0

@@ -40,7 +40,7 @@ public class Interactable : MonoBehaviour
         else
         {
             SoundManager.Instance.PlayError();
-            string message = "Need " + _requiredObjects[0].name + "!";
+            string message = "Needs " + _requiredObjects[0].name + "!";
             UIManager.Instance.Message(message);
         }
     }

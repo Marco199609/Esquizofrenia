@@ -3,7 +3,27 @@ guid: 5346c96419824f24a9e76a28bbf4691b
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stick_1_Material
+    second: {fileID: 2100000, guid: 189a694581a09ff4ca10262f9b2297de, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stick_2_Material
+    second: {fileID: 2100000, guid: 82ace27e9569d8d4f87d76956714b7f6, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stick_3_Material
+    second: {fileID: 2100000, guid: e2696a5dbfb7ab34dbd3b4bc6a7085d3, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Stick_4_Material
+    second: {fileID: 2100000, guid: 6bd8f642ed667b244b91ac0e1f01a7fa, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -88,7 +108,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.02
+    globalScale: 2
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0

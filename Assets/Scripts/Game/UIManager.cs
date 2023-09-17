@@ -42,12 +42,12 @@ public class UIManager : MonoBehaviour
         {
             if(button == _inventoryButtons[i].gameObject)
             {
-                _inventoryIconBackgrounds[i].color = Color.green;
+                _inventoryIconBackgrounds[i].color = new Color(0, 1, 0, 0.2f);
                 PlayerController.Instance.Inventory.UISelectedObject(i);
             }
             else
             {
-                _inventoryIconBackgrounds[i].color = Color.white;
+                _inventoryIconBackgrounds[i].color = new Color (1, 1, 1, 0.2f);
             }
         }
     }
