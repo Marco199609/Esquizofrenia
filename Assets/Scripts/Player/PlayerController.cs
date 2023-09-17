@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 
-[RequireComponent(typeof(PlayerSelectObject))]
-[RequireComponent(typeof(PlayerInventory))]
+[RequireComponent(typeof(PlayerSelectObject), typeof(PlayerInventory))]
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private Camera _camera;

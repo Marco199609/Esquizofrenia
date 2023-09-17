@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Behaviour_ChangeObject : MonoBehaviour, IBehaviour
 {
-    [SerializeField] private GameObject _objectToDeactivate, _objectToActivate;
+    [SerializeField] private GameObject _objectToActivate;
+    [SerializeField] private GameObject _objectToDeactivate; 
 
     public void Behaviour()
     {
