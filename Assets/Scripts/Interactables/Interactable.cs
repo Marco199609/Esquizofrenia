@@ -4,32 +4,39 @@ using UnityEngine;
 
 public class Interactable : MonoBehaviour
 {
-    [SerializeField] private GameObject _requiredObject;
+    [SerializeField] private List<GameObject> _requiredObjects;
 
     private PlayerInventory _inventory;
+
+    private IBehaviour[] _behaviours;
+
+    private void Awake()
+    {
+        _behaviours = GetComponents<IBehaviour>();
+    }
 
     public void Interact()
     {
         _inventory = PlayerController.Instance.Inventory;
 
-        if (_requiredObject == null)
+        if (_requiredObjects.Contains(_inventory.SelectedObject()))
         {
-            GetComponent<IBehaviour>().Behaviour();
+            _requiredObjects.Remove(_inventory.SelectedObject());
+            _inventory.Use(_inventory.SelectedObject());
         }
-        else if (_inventory.SelectedObject() == _requiredObject)
-        {
-            _inventory.Use(_requiredObject);
-            _requiredObject = null;
 
-            GetComponent<IBehaviour>().Behaviour();
+        if (_requiredObjects.Count == 0)
+        {
+            for(int i = 0; i < _behaviours.Length; i++)
+            {
+                _behaviours[i].Behaviour();
+            }
         }
         else
         {
             SoundManager.Instance.PlayError();
-            string message = "Need " + _requiredObject.name + "!";
+            string message = "Need " + _requiredObjects[0].name + "!";
             UIManager.Instance.Message(message);
         }
     }
-
-
 }

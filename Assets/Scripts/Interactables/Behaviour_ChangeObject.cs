@@ -9,7 +9,7 @@ public class Behaviour_ChangeObject : MonoBehaviour, IBehaviour
 
     public void Behaviour()
     {
-        _objectToDeactivate.SetActive(false);
-        _objectToActivate.SetActive(true);
+        if(_objectToDeactivate != null) _objectToDeactivate.SetActive(false);
+        if(_objectToActivate != null) _objectToActivate.SetActive(true);
     }
 }
