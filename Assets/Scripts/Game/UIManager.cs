@@ -8,13 +8,23 @@ public class UIManager : MonoBehaviour
     [SerializeField] private TextMeshProUGUI _messageText;
     [SerializeField] private GameObject[] _inventoryButtons;
     [SerializeField] private SpriteRenderer[] _inventoryIconBackgrounds;
+    [SerializeField] private Texture2D _genericCursor;
+    [SerializeField] private Texture2D _interactableCursor;
+
     [field: SerializeField] public SpriteRenderer[] InventoryIcons;
 
     public static UIManager Instance { get; private set; }
+
+    private RaycastHit mouseRaycastHit;
     private void Awake()
     {
         if (Instance != null && Instance != this) Destroy(this);
         else Instance = this;
+    }
+
+    private void Update()
+    {
+        ManageCursor();
     }
 
     public void Message(string message)
@@ -50,5 +60,24 @@ public class UIManager : MonoBehaviour
                 _inventoryIconBackgrounds[i].color = new Color (1, 1, 1, 0.2f);
             }
         }
+    }
+
+    private void ManageCursor()
+    {
+        if (Physics.Raycast(Camera.main.ScreenPointToRay(Input.mousePosition), out mouseRaycastHit))
+        {
+            if (mouseRaycastHit.collider.GetComponent<Interactable>() == null)
+            {
+                Cursor.SetCursor(_genericCursor, Vector2.zero, CursorMode.Auto);
+            }
+            else
+            {
+                Cursor.SetCursor(_interactableCursor, Vector2.zero, CursorMode.Auto);
+            }
+        }
+        else
+        {
+            Cursor.SetCursor(_genericCursor, Vector2.zero, CursorMode.Auto);
+        }  
     }
 }

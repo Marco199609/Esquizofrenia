@@ -1576,6 +1576,8 @@ MonoBehaviour:
   - {fileID: 8852802755489687398}
   - {fileID: 2608572474420049820}
   - {fileID: 6623202590744095514}
+  _genericCursor: {fileID: 2800000, guid: 0285261a6068dc249a2e1cc95c6a06b0, type: 3}
+  _interactableCursor: {fileID: 2800000, guid: ae3a7e3ba42babc459e3dbed39641e7b, type: 3}
   InventoryIcons:
   - {fileID: 4974966923366539086}
   - {fileID: 6662975462185680166}

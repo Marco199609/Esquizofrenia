@@ -17,6 +17,8 @@ public class PlayerInventory : MonoBehaviour
             string message = "Added " + inventoryObject.name + " to inventory!";
             UIManager.Instance.Message(message);
 
+            UIManager.Instance.SelectInventoryItem();
+
             inventoryObject.SetActive(false);
         }
         else
