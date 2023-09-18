@@ -10,7 +10,6 @@ GameObject:
   m_Component:
   - component: {fileID: 441189290}
   - component: {fileID: 441189292}
-  - component: {fileID: 441189291}
   m_Layer: 0
   m_Name: Mirror Camera 2
   m_TagString: Untagged
@@ -76,14 +75,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &441189291
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 441189289}
-  m_Enabled: 1
 --- !u!1 &678254307
 GameObject:
   m_ObjectHideFlags: 0
@@ -94,7 +85,6 @@ GameObject:
   m_Component:
   - component: {fileID: 678254308}
   - component: {fileID: 678254310}
-  - component: {fileID: 678254309}
   m_Layer: 0
   m_Name: Mirror Camera 1
   m_TagString: Untagged
@@ -160,14 +150,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &678254309
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 678254307}
-  m_Enabled: 1
 --- !u!1 &795836523
 GameObject:
   m_ObjectHideFlags: 0
@@ -178,7 +160,6 @@ GameObject:
   m_Component:
   - component: {fileID: 795836524}
   - component: {fileID: 795836526}
-  - component: {fileID: 795836525}
   m_Layer: 0
   m_Name: Puddle Camera
   m_TagString: Untagged
@@ -244,14 +225,6 @@ Camera:
   m_OcclusionCulling: 1
   m_StereoConvergence: 10
   m_StereoSeparation: 0.022
---- !u!81 &795836525
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 795836523}
-  m_Enabled: 1
 --- !u!1 &6675675485074374130
 GameObject:
   m_ObjectHideFlags: 0
@@ -531,7 +504,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6675675485701154458}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.94, y: 0.932, z: -1.535}
+  m_LocalPosition: {x: 2.94, y: 1.321, z: -1.535}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_ConstrainProportionsScale: 0
   m_Children:
