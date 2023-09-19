@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
-using static UnityEditor.Progress;
 
 [RequireComponent(typeof(UIHandManager), typeof(UICursorManager), typeof(UISelectInventoryItem))]
 [RequireComponent (typeof(UIMessageDisplay), typeof(UIIconUpdate))]
