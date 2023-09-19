@@ -6,7 +6,6 @@ public class PlayerInventory : MonoBehaviour
 {
     [SerializeField] public List<GameObject> Objects;
     [SerializeField] private int _inventoryCapacity = 4;
-
     [SerializeField] private GameObject _selectedObject;
 
     public void Add(GameObject inventoryObject)
@@ -41,7 +40,6 @@ public class PlayerInventory : MonoBehaviour
         }
 
         UpdateUI();
-        UIManager.Instance.SelectInventoryItem();
     }
 
     public GameObject SelectedObject(int index)
@@ -65,19 +63,15 @@ public class PlayerInventory : MonoBehaviour
 
     private void UpdateUI()
     {
-        for(int i = 0; i < _inventoryCapacity; i++)
+        for (int i = 0; i < _inventoryCapacity; i++)
         {
-            if(i < Objects.Count && Objects[i] != null)
+            if (i < Objects.Count && Objects[i] != null)
             {
-                UIManager.Instance.InventoryIcons[i].sprite = Objects[i].GetComponent<Behaviour_AddToInventory>().Icon;
-                UIManager.Instance.InventoryIcons[i].color = Color.white;
-                UIManager.Instance.InventoryIconBackgrounds[i].sprite = UIManager.Instance.InventoryFilledBackground;
+                UIManager.Instance.UpdateInventoryIcons(i, Objects[i].GetComponent<Behaviour_AddToInventory>().Icon, true);
             }
             else
             {
-                UIManager.Instance.InventoryIcons[i].sprite = null;
-                UIManager.Instance.InventoryIcons[i].color = new Color(1, 1, 1, 0);
-                UIManager.Instance.InventoryIconBackgrounds[i].sprite = UIManager.Instance.InventoryEmptyBackground;
+                UIManager.Instance.UpdateInventoryIcons(i, null, false);
             }
         }
     }
