@@ -7,7 +7,7 @@ public class PlayerInventory : MonoBehaviour
     [SerializeField] public List<GameObject> Objects;
     [SerializeField] private int _inventoryCapacity = 4;
 
-    private GameObject _selectedObject;
+    [SerializeField] private GameObject _selectedObject;
 
     public void Add(GameObject inventoryObject)
     {
@@ -37,18 +37,25 @@ public class PlayerInventory : MonoBehaviour
         {
             Objects.Remove(inventoryObject);
             Destroy(inventoryObject);
+            _selectedObject = null;
         }
 
         UpdateUI();
         UIManager.Instance.SelectInventoryItem();
     }
 
-    public void UISelectedObject(int index)
+    public GameObject SelectedObject(int index)
     {
         if(index < Objects.Count)
+        {
             _selectedObject = Objects[index];
+            return _selectedObject.GetComponent<Behaviour_AddToInventory>().ItemSprite;
+        }
         else
+        {
             _selectedObject = null;
+            return null;
+        }
     }
 
     public GameObject SelectedObject()

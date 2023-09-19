@@ -23,7 +23,6 @@ public class SoundManager : MonoBehaviour
         else Instance = this;
     }
 
-
     public void PlaySoundEffect()
     {
         EffectsSource.PlayOneShot(_pickupClip, _pickupClipVolume);

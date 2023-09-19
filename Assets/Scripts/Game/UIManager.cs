@@ -2,11 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
+using static UnityEditor.Progress;
 
 public class UIManager : MonoBehaviour
 {
+    private UIHandManager _UIHandManager;
+
     [SerializeField] private TextMeshProUGUI _messageText;
-    [SerializeField] private GameObject[] _inventoryButtons;
+    [SerializeField] private List<GameObject> _inventoryButtons;
     [SerializeField] private SpriteRenderer[] _inventoryIconBackgrounds;
     [SerializeField] private Texture2D _genericCursor;
     [SerializeField] private Texture2D _interactableCursor;
@@ -20,6 +23,8 @@ public class UIManager : MonoBehaviour
     {
         if (Instance != null && Instance != this) Destroy(this);
         else Instance = this;
+
+        _UIHandManager = GetComponent<UIHandManager>();
     }
 
     private void Update()
@@ -48,16 +53,36 @@ public class UIManager : MonoBehaviour
         SoundManager.Instance.PlayClick();
         GameObject button = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject;
 
-        for(int i = 0; i < _inventoryButtons.Length; i++)
+        if(_inventoryButtons.Contains(button))
         {
-            if(button == _inventoryButtons[i].gameObject)
+            for (int i = 0; i < _inventoryButtons.Count; i++)
             {
-                _inventoryIconBackgrounds[i].color = new Color(0, 1, 0, 0.2f);
-                PlayerController.Instance.Inventory.UISelectedObject(i);
+                if (button == _inventoryButtons[i].gameObject)
+                {
+                    _inventoryIconBackgrounds[i].color = new Color(0, 1, 0, 0.2f);
+
+                    if (PlayerController.Instance.Inventory.SelectedObject(i) == null)
+                    {
+                        _UIHandManager.ShowHand = false;
+                    }
+                    else
+                    {
+                        _UIHandManager.ActivateItemSprite(PlayerController.Instance.Inventory.SelectedObject(i));
+                    }
+                }
+                else
+                {
+                    _inventoryIconBackgrounds[i].color = new Color(1, 1, 1, 0.2f);
+                }
             }
-            else
+        }
+        else
+        {
+            _UIHandManager.ShowHand = false;
+
+            for (int i = 0; i < _inventoryButtons.Count; i++)
             {
-                _inventoryIconBackgrounds[i].color = new Color (1, 1, 1, 0.2f);
+                _inventoryIconBackgrounds[i].color = new Color(1, 1, 1, 0.2f);
             }
         }
     }
