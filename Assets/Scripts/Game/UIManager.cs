@@ -9,12 +9,19 @@ public class UIManager : MonoBehaviour
     private UIHandManager _UIHandManager;
 
     [SerializeField] private TextMeshProUGUI _messageText;
+
+    [Header("Inventory UI")]
     [SerializeField] private List<GameObject> _inventoryButtons;
-    [SerializeField] private SpriteRenderer[] _inventoryIconBackgrounds;
+    [field: SerializeField] public SpriteRenderer[] InventoryIcons;
+    [SerializeField] public SpriteRenderer[] InventoryIconBackgrounds;
+    [SerializeField] public Sprite InventoryEmptyBackground;
+    [SerializeField] public Sprite InventoryFilledBackground;
+
+    [Header("Cursor")]
     [SerializeField] private Texture2D _genericCursor;
     [SerializeField] private Texture2D _interactableCursor;
 
-    [field: SerializeField] public SpriteRenderer[] InventoryIcons;
+
 
     public static UIManager Instance { get; private set; }
 
@@ -59,7 +66,7 @@ public class UIManager : MonoBehaviour
             {
                 if (button == _inventoryButtons[i].gameObject)
                 {
-                    _inventoryIconBackgrounds[i].color = new Color(0, 1, 0, 0.2f);
+                    InventoryIconBackgrounds[i].color = new Color(0, 1, 0, 1f);
 
                     if (PlayerController.Instance.Inventory.SelectedObject(i) == null)
                     {
@@ -72,7 +79,7 @@ public class UIManager : MonoBehaviour
                 }
                 else
                 {
-                    _inventoryIconBackgrounds[i].color = new Color(1, 1, 1, 0.2f);
+                    InventoryIconBackgrounds[i].color = new Color(1, 1, 1, 1f);
                 }
             }
         }
@@ -82,7 +89,7 @@ public class UIManager : MonoBehaviour
 
             for (int i = 0; i < _inventoryButtons.Count; i++)
             {
-                _inventoryIconBackgrounds[i].color = new Color(1, 1, 1, 0.2f);
+                InventoryIconBackgrounds[i].color = new Color(1, 1, 1, 1f);
             }
         }
     }

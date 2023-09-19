@@ -71,11 +71,13 @@ public class PlayerInventory : MonoBehaviour
             {
                 UIManager.Instance.InventoryIcons[i].sprite = Objects[i].GetComponent<Behaviour_AddToInventory>().Icon;
                 UIManager.Instance.InventoryIcons[i].color = Color.white;
+                UIManager.Instance.InventoryIconBackgrounds[i].sprite = UIManager.Instance.InventoryFilledBackground;
             }
             else
             {
                 UIManager.Instance.InventoryIcons[i].sprite = null;
                 UIManager.Instance.InventoryIcons[i].color = new Color(1, 1, 1, 0);
+                UIManager.Instance.InventoryIconBackgrounds[i].sprite = UIManager.Instance.InventoryEmptyBackground;
             }
         }
     }
