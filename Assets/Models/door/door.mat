@@ -9,8 +9,7 @@ Material:
   m_PrefabAsset: {fileID: 0}
   m_Name: door
   m_Shader: {fileID: 46, guid: 0000000000000000f000000000000000, type: 0}
-  m_ValidKeywords:
-  - _NORMALMAP
+  m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -22,7 +21,7 @@ Material:
     serializedVersion: 3
     m_TexEnvs:
     - _BumpMap:
-        m_Texture: {fileID: 2800000, guid: ef9544711b782b04285edf049fab527a, type: 3}
+        m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _DetailAlbedoMap:
@@ -42,7 +41,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 2800000, guid: 4c7e4da0593a7f04094e1dada4012ea1, type: 3}
+        m_Texture: {fileID: 2800000, guid: fb136a49427460d4893d49c8795776e2, type: 3}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MetallicGlossMap:
@@ -76,6 +75,6 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 1, g: 0.7803719, b: 0.5801887, a: 1}
+    - _Color: {r: 0.8113208, g: 0.8113208, b: 0.8113208, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
   m_BuildTextureStacks: []

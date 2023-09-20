@@ -37,6 +37,9 @@ public class PlayerInventory : MonoBehaviour
             Objects.Remove(inventoryObject);
             Destroy(inventoryObject);
             _selectedObject = null;
+
+            string message = "Used " + inventoryObject.name + "!";
+            UIManager.Instance.Message(message);
         }
 
         UpdateUI();

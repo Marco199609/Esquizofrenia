@@ -12,7 +12,7 @@ public class UICursorManager : MonoBehaviour
         {
             if (mouseRaycastHit.collider.GetComponent<Interactable>() == null)
             {
-                Cursor.SetCursor(genericCursor, Vector2.zero, CursorMode.Auto);
+                Cursor.SetCursor(genericCursor, new Vector2(interactableCursor.height / 2, interactableCursor.width / 2), CursorMode.Auto);
             }
             else
             {
